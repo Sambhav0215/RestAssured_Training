@@ -12,16 +12,18 @@ public class QueryAndPathParameters {
 
         given()
                 .header("x-api-key","free_user_3EL4FeP7G9SNVZlTS3D8roEauh9")
-                .pathParams("path","users")
+
+                .pathParams("paths","users")
                 .queryParam("page",2)
                 .queryParam("id",5)
+
                 .when()
-                .get("https://reqres.in/api/{path}")
+                .get("https://reqres.in/api/{paths}")
 
                 .then()
                 .statusCode(200)
+                .body("data.id", equalTo(5))
                 .log().all();
-
     }
 
 
