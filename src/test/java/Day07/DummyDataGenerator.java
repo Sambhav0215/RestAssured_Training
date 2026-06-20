@@ -13,7 +13,7 @@ public class DummyDataGenerator {
     @Test
     public void testDummyData(){
 
-        Map data = new HashMap<>();
+        Map<String,String> data = new HashMap<>();
 
         Faker faker =  new Faker();
 
